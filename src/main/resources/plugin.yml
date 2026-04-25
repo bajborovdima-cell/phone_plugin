@@ -1,0 +1,97 @@
+name: SmartPhone
+version: '3.1.0'
+main: com.example.smartphone.SmartPhonePlugin
+api-version: '1.21'
+description: Телефон с функциями (недвижимость, автопостройка, охрана с мечами, перки, шахтинг, oneblock, дуэли)
+authors:
+  - Qwen
+
+commands:
+  phone:
+    description: Получить телефон
+    usage: /phone
+    aliases: [телефон, p]
+  taxi:
+    description: Вызвать такси
+    usage: /taxi [home|spawn|cancel]
+  home:
+    description: Телепортироваться домой
+    usage: /home
+    aliases: [h]
+  sethome:
+    description: Установить дом
+    usage: /sethome
+  delhome:
+    description: Удалить дом
+    usage: /delhome
+  killer:
+    description: Нанять киллера
+    usage: /killer <игрок>
+  guard:
+    description: Вызвать охранника
+    usage: /guard [dismiss]
+  balance:
+    description: Показать баланс
+    usage: /balance
+    aliases: [money, bal, б]
+  pay:
+    description: Перевести деньги
+    usage: /pay <игрок> <сумма>
+  top:
+    description: Топ богатых игроков
+    usage: /top
+  shop:
+    description: Открыть магазин
+    usage: /shop
+  perkpoints:
+    description: Выдать очки перков (админ)
+    usage: /perkpoints <игрок> <количество>
+    permission: smartphone.perkpoints
+  mining:
+    description: Открыть меню шахтинга
+    usage: /mining
+    aliases: [шахтинг, mine]
+  duel:
+    description: Вызвать игрока на дуэль
+    usage: /duel <игрок>
+    aliases: [pvp, fight]
+  godwand:
+    description: Выдать палочку бога (админ)
+    usage: /godwand
+    permission: smartphone.godwand
+  oneblock:
+    description: Режим "Один блок"
+    usage: /oneblock [exit]
+    aliases: [1block, одинблок]
+
+permissions:
+  smartphone.use:
+    description: Доступ к телефону
+    default: true
+  smartphone.taxi:
+    description: Доступ к такси
+    default: true
+  smartphone.killer:
+    description: Доступ к киллеру
+    default: true
+  smartphone.guard:
+    description: Доступ к охраннику
+    default: true
+  smartphone.shop:
+    description: Доступ к магазину
+    default: true
+  smartphone.perkpoints:
+    description: Доступ к выдаче очков перков
+    default: op
+  smartphone.perks:
+    description: Доступ к перкам
+    default: true
+  smartphone.mining:
+    description: Доступ к шахтингу
+    default: true
+  smartphone.godwand:
+    description: Доступ к палочке бога
+    default: op
+  smartphone.oneblock:
+    description: Доступ к режиму "Один блок"
+    default: true
